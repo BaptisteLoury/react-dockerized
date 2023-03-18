@@ -1,0 +1,7 @@
+{
+    "signin.error.disconnected": "You have been disconnected",
+    "signin.form.title": "Connection",
+    "signin.form.email": "Email",
+    "signin.form.password": "Password",
+    "signin.form.connect": "Connect"
+}

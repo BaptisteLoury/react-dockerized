@@ -1,0 +1,86 @@
+#home {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+
+    #sidebar {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 50px;
+        background-color: black;
+        transition: width 0.1s;
+
+        .top {
+            display: flex;
+            justify-content: center;
+
+            .hmbrg {
+                margin: 10px;
+            }
+
+            #menu_checkbox {
+                display: none;
+            }
+
+            label {
+                display: block;
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+            }
+            label:before {
+                content: "";
+            }
+            label div {
+                position: relative;
+                top: 0;
+                height: 5px;
+                background-color: #ccc;
+                margin-bottom: 6px;
+                border-radius: 2px;
+            }
+            label div:first-child {
+                transform-origin: 0;
+            }
+            label div:last-child {
+                margin-bottom: 0;
+                transform-origin: 30px;
+            }
+            label div:nth-child(2) {
+                right: 0;
+                width: 30px;
+            }
+            #menu_checkbox:checked+label div:first-child {
+                top: -4px;
+                transform: rotateZ(45deg);
+            }
+            #menu_checkbox:checked+label div:last-child {
+                top: 4px;
+                transform: rotateZ(45deg);
+            }
+            #menu_checkbox:checked+label div:nth-child(2) {
+                width: 42px;
+                top: 0;
+                right: 7px;
+                transform: rotateZ(-45deg);
+            }
+            .hmbrg:hover div {
+                background-color: #fff;
+            }
+        }
+    }
+
+    #sidebar.expanded {
+        width: 300px;
+
+        .top {
+            justify-content: flex-end;
+        }
+    }
+
+    #core {
+        height: 100%;
+        flex: auto;
+    }
+}

@@ -1,0 +1,3 @@
+FROM postgres:13
+COPY back/01_create_db.sql /docker-entrypoint-initdb.d/
+COPY back/02_insert.sql /docker-entrypoint-initdb.d/
