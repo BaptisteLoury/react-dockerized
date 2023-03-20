@@ -27,7 +27,7 @@ function SignIn() {
     const submit = e => {
         e.preventDefault();
 
-        Api.post('http://flask/authenticate', {
+        Api.post('/authenticate', {
             email: email,
             password: password
         }, data => {

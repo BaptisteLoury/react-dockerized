@@ -10,7 +10,7 @@ function Home() {
 
     useEffect(() => {
         if (con.connected) {
-            Api.get('http://flask/user', data => {
+            Api.get('/user', data => {
                 setInfos(data)
             }, con)
         }
@@ -26,7 +26,7 @@ function Home() {
                     <div className="hmbrg">
                         <input type="checkbox" id="menu_checkbox"
                             onChange={e => setExpanded(e.currentTarget.checked)} />
-                        <label for="menu_checkbox">
+                        <label htmlFor="menu_checkbox">
                             <div></div>
                             <div></div>
                             <div></div>
